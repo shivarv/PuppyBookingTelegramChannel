@@ -1,0 +1,43 @@
+{
+  "puppies": [
+    {
+      "id": 1,
+      "name": "Bruno",
+      "age": "8 weeks",
+      "gender": "Male",
+      "color": "Black Brindle",
+      "price": "$2,500",
+      "available": true,
+      "description": "Healthy male puppy from champion bloodline. First vaccinations completed, dewormed, microchipped. Great temperament, very playful and social.",
+      "photo_url": null
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "age": "10 weeks",
+      "gender": "Female",
+      "color": "Blue/Grey",
+      "price": "$2,800",
+      "available": true,
+      "description": "Beautiful blue/grey female with excellent structure. From imported European lines. Very intelligent and eager to please.",
+      "photo_url": null
+    },
+    {
+      "id": 3,
+      "name": "Titan",
+      "age": "9 weeks",
+      "gender": "Male",
+      "color": "Formentino",
+      "price": "$3,200",
+      "available": true,
+      "description": "Rare formentino color. Show quality with amazing bone structure. Champion parents on both sides.",
+      "photo_url": null
+    }
+  ],
+  "about": "Welcome to our Cane Corso kennel! We are dedicated breeders passionate about preserving the true Cane Corso temperament and type. Our dogs come from the finest European and American champion bloodlines. All our puppies are raised in our home with lots of love and socialization. We health test all our breeding dogs and provide a 2-year health guarantee. Each puppy comes with complete health records, first vaccinations, deworming, microchip, and a comprehensive puppy package to help you get started.",
+  "contact_info": {
+    "phone": "+1-XXX-XXX-XXXX",
+    "email": "info@canecorsokennel.com",
+    "location": "Your City, Your State"
+  }
+}

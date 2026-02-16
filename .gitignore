@@ -1,0 +1,12 @@
+# Python environment
+venv/
+
+# Secrets
+.env
+
+# MacOS system files
+.DS_Store
+
+# Any editor temp files
+*.swp
+*.save

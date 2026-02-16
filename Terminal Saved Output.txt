@@ -1,0 +1,247 @@
+Last login: Tue Feb 17 01:44:59 on ttys000
+shiva@Shivas-MacBook-Air ~ % cd Desktop
+shiva@Shivas-MacBook-Air Desktop % cd "python project' 
+dquote> "
+cd: no such file or directory: python project'\n
+shiva@Shivas-MacBook-Air Desktop % cd "python project"
+cd: no such file or directory: python project
+shiva@Shivas-MacBook-Air Desktop % ls
+codes			git hub			python projects
+ebooks			project documents	Salesforce
+shiva@Shivas-MacBook-Air Desktop % cd "python projects"
+shiva@Shivas-MacBook-Air python projects % pip install python-doten 
+zsh: command not found: pip
+shiva@Shivas-MacBook-Air python projects % pip install python-dotenv
+zsh: command not found: pip
+shiva@Shivas-MacBook-Air python projects % python install pip
+zsh: command not found: python
+shiva@Shivas-MacBook-Air python projects % curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 2142k  100 2142k    0     0  3093k      0 --:--:-- --:--:-- --:--:-- 3090k
+shiva@Shivas-MacBook-Air python projects % python3 get-pip.py
+Collecting pip
+  Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 8.2 MB/s  0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.3
+    Uninstalling pip-25.3:
+      Successfully uninstalled pip-25.3
+Successfully installed pip-26.0.1
+shiva@Shivas-MacBook-Air python projects % python3 -m pip install python-dotenv
+Collecting python-dotenv
+  Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+Installing collected packages: python-dotenv
+Successfully installed python-dotenv-1.2.1
+shiva@Shivas-MacBook-Air python projects % python3 cane_corso_bot.py
+✅ Loading configuration from .env file
+✅ Admin ID configured: 6818471933
+✅ Bot token configured
+Traceback (most recent call last):
+  File "/Users/shiva/Desktop/python projects/cane_corso_bot.py", line 499, in <module>
+    main()
+    ~~~~^^
+  File "/Users/shiva/Desktop/python projects/cane_corso_bot.py", line 466, in main
+    application = Application.builder().token(TOKEN).build()
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/telegram/ext/_applicationbuilder.py", line 312, in build
+    updater = Updater(bot=bot, update_queue=update_queue)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/telegram/ext/_updater.py", line 128, in __init__
+    self.__polling_cleanup_cb: Optional[Callable[[], Coroutine[Any, Any, None]]] = None
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Updater' object has no attribute '_Updater__polling_cleanup_cb' and no __dict__ for setting new attributes
+shiva@Shivas-MacBook-Air python projects % python3 --version
+Python 3.14.3
+shiva@Shivas-MacBook-Air python projects % brew install python@3.12
+✔︎ JSON API cask.jws.json                             Downloaded   15.3MB/ 15.3MB
+✔︎ JSON API formula.jws.json                          Downloaded   31.9MB/ 31.9MB
+==> Fetching downloads for: python@3.12
+✔︎ Bottle Manifest python@3.12 (3.12.12_2)            Downloaded   28.3KB/ 28.3KB
+⠙ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠖ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠲ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠓ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠙ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠚ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠖ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠦ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠲ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+⠳ Bottle python@3.12 (3.12.12_2) ###############     Downloading  14.6MB/ 18.1M
+✔︎ Bottle python@3.12 (3.12.12_2)                     Downloaded   18.1MB/ 18.1MB
+==> Pouring python@3.12--3.12.12_2.arm64_sequoia.bottle.1.tar.gz
+
+
+
+
+
+
+
+
+
+
+==> Caveats
+Python is installed as
+  /opt/homebrew/bin/python3.12
+
+Unversioned and major-versioned symlinks `python`, `python3`, `python-config`, `python3-config`, `pip`, `pip3`, etc. pointing to
+`python3.12`, `python3.12-config`, `pip3.12` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.12/libexec/bin
+
+If you do not need a specific version of Python, and always want Homebrew's `python3` in your PATH:
+  brew install python3
+
+`idle3.12` requires tkinter, which is available separately:
+  brew install python-tk@3.12
+
+See: https://docs.brew.sh/Homebrew-and-Python
+==> Summary
+🍺  /opt/homebrew/Cellar/python@3.12/3.12.12_2: 3,612 files, 70MB
+==> Running `brew cleanup python@3.12`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+shiva@Shivas-MacBook-Air python projects % python3.12 -m venv venv
+shiva@Shivas-MacBook-Air python projects % source venv/bin/activate
+((venv) ) shiva@Shivas-MacBook-Air python projects % pip install -r requirements.txt
+Collecting python-telegram-bot==20.7 (from -r requirements.txt (line 1))
+  Using cached python_telegram_bot-20.7-py3-none-any.whl.metadata (15 kB)
+Collecting httpx~=0.25.2 (from python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached httpx-0.25.2-py3-none-any.whl.metadata (6.9 kB)
+Collecting anyio (from httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting certifi (from httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting sniffio (from httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting typing_extensions>=4.5 (from anyio->httpx~=0.25.2->python-telegram-bot==20.7->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Using cached python_telegram_bot-20.7-py3-none-any.whl (552 kB)
+Using cached httpx-0.25.2-py3-none-any.whl (74 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
+Using cached idna-3.11-py3-none-any.whl (71 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached certifi-2026.1.4-py3-none-any.whl (152 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Installing collected packages: typing_extensions, sniffio, idna, h11, certifi, httpcore, anyio, httpx, python-telegram-bot
+Successfully installed anyio-4.12.1 certifi-2026.1.4 h11-0.16.0 httpcore-1.0.9 httpx-0.25.2 idna-3.11 python-telegram-bot-20.7 sniffio-1.3.1 typing_extensions-4.15.0
+
+[notice] A new release of pip is available: 26.0 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+((venv) ) shiva@Shivas-MacBook-Air python projects % pip install python-dotenv
+Collecting python-dotenv
+  Using cached python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+Using cached python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+Installing collected packages: python-dotenv
+Successfully installed python-dotenv-1.2.1
+
+[notice] A new release of pip is available: 26.0 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip
+((venv) ) shiva@Shivas-MacBook-Air python projects % python cane_corso_bot.py
+✅ Loading configuration from .env file
+✅ Admin ID configured: 6818471933
+✅ Bot token configured
+/Users/shiva/Desktop/python projects/cane_corso_bot.py:473: PTBUserWarning: If 'per_message=False', 'CallbackQueryHandler' will not be tracked for every message. Read this FAQ entry to learn more about the per_* settings: https://github.com/python-telegram-bot/python-telegram-bot/wiki/Frequently-Asked-Questions#what-do-the-per_-settings-in-conversationhandler-do.
+  conv_handler = ConversationHandler(
+
+==================================================
+🚀 Bot is starting...
+==================================================
+✅ Ready to accept connections!
+💬 Users can now chat with your bot on Telegram
+🔔 You'll receive inquiry notifications on Telegram
+
+Press Ctrl+C to stop the bot
+==================================================
+
+2026-02-17 02:48:36,763 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getMe "HTTP/1.1 200 OK"
+2026-02-17 02:48:36,957 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-17 02:48:36,960 - telegram.ext.Application - INFO - Application started
+2026-02-17 02:48:47,618 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:48:57,860 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:06,213 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:16,408 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:26,599 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:36,790 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:47,010 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:49:57,250 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:07,442 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:07,632 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:08,571 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/sendMessage "HTTP/1.1 200 OK"
+2026-02-17 02:50:12,404 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:12,759 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-17 02:50:13,130 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/editMessageText "HTTP/1.1 200 OK"
+2026-02-17 02:50:16,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:16,864 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-17 02:50:17,230 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/editMessageText "HTTP/1.1 200 OK"
+2026-02-17 02:50:19,265 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:19,620 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-17 02:50:19,989 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/editMessageText "HTTP/1.1 200 OK"
+2026-02-17 02:50:29,511 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:39,701 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:50:49,898 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:00,090 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:10,363 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:20,603 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:30,843 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:33,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:34,545 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/sendMessage "HTTP/1.1 200 OK"
+2026-02-17 02:51:44,052 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:51:54,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:04,582 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:14,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:24,984 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:35,176 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:45,367 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:52:55,630 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:05,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:16,013 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:26,203 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:36,393 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:46,585 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:53:56,779 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:07,003 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:17,244 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:27,484 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:37,675 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:47,866 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:54:58,308 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:55:08,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+2026-02-17 02:55:18,699 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8566557047:AAH9doJT_5ICKAPBInJOzofD69nfaguOzRs/getUpdates "HTTP/1.1 200 OK"
+^C^C%                                                                           ((venv) ) shiva@Shivas-MacBook-Air python projects % git init
+Initialized empty Git repository in /Users/shiva/Desktop/python projects/.git/
+((venv) ) shiva@Shivas-MacBook-Air python projects % git add .
+((venv) ) shiva@Shivas-MacBook-Air python projects % nano .gitignore
+
+  UW PICO 5.09                    File: .gitignore                    Modified  
+
+.env
+venv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            [ Unknown Command: ^S ]                             
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
