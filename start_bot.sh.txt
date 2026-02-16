@@ -1,0 +1,3 @@
+#!/bin/bash
+source venv/bin/activate  # optional if using venv locally
+python cane_corso_bot.py
