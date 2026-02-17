@@ -18,6 +18,9 @@ from telegram.ext import (
 import json
 import os
 from datetime import datetime
+from aiohttp import web
+import asyncio
+import threading
 
 # Load environment variables from .env file
 try:
@@ -439,8 +442,28 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return ConversationHandler.END
 
 
-def main():
-    """Start the bot"""
+async def health_check(request):
+    """Health check endpoint for Render"""
+    return web.Response(text="🐕 Cane Corso Bot is running!")
+
+
+async def start_web_server():
+    """Start health check web server for Render"""
+    app = web.Application()
+    app.router.add_get('/', health_check)
+    app.router.add_get('/health', health_check)
+    
+    port = int(os.getenv('PORT', 10000))
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, '0.0.0.0', port)
+    await site.start()
+    print(f"✅ Health check server running on port {port}")
+    return runner
+
+
+async def main_async():
+    """Main async function"""
     # Get token from environment variable
     TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
     
@@ -448,19 +471,14 @@ def main():
         print("\n" + "="*50)
         print("❌ ERROR: TELEGRAM_BOT_TOKEN not found!")
         print("="*50)
-        print("\nPlease set your bot token in one of these ways:\n")
-        print("1. Create a .env file with:")
-        print("   TELEGRAM_BOT_TOKEN=your_token_here")
-        print("   TELEGRAM_ADMIN_ID=your_user_id_here\n")
-        print("2. Or set environment variables:")
-        print("   export TELEGRAM_BOT_TOKEN='your_token_here'")
-        print("   export TELEGRAM_ADMIN_ID='your_user_id_here'\n")
-        print("Get your token from @BotFather on Telegram")
-        print("Get your user ID from @userinfobot on Telegram")
+        print("\nPlease set your bot token in environment variables")
         print("="*50 + "\n")
         return
     
     print(f"✅ Bot token configured")
+    
+    # Start web server for Render health checks
+    web_runner = await start_web_server()
     
     # Create application
     application = Application.builder().token(TOKEN).build()
@@ -489,10 +507,28 @@ def main():
     print("✅ Ready to accept connections!")
     print("💬 Users can now chat with your bot on Telegram")
     print("🔔 You'll receive inquiry notifications on Telegram")
-    print("\nPress Ctrl+C to stop the bot")
+    print("\nBot will run continuously...")
     print("="*50 + "\n")
     
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    # Initialize and start polling
+    await application.initialize()
+    await application.start()
+    await application.updater.start_polling(allowed_updates=Update.ALL_TYPES)
+    
+    # Keep running
+    try:
+        await asyncio.Event().wait()
+    except (KeyboardInterrupt, SystemExit):
+        print("\nShutting down...")
+        await application.updater.stop()
+        await application.stop()
+        await application.shutdown()
+        await web_runner.cleanup()
+
+
+def main():
+    """Entry point"""
+    asyncio.run(main_async())
 
 
 if __name__ == '__main__':
